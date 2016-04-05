@@ -2,7 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp">
+    android:padding="3dp">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -10,4 +10,38 @@
         android:layout_height="match_parent"
         android:scrollbars="vertical" />
 
+    <TabHost android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent"
+            android:id="@+id/linearLayout1"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <FrameLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@android:id/tabcontent"
+                android:layout_alignParentTop="true">
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/contentlayout1"
+                    android:orientation="horizontal">
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/contentlayout2"
+                    android:orientation="horizontal">
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/contentlayout3"
+                    android:orientation="horizontal">
+                </LinearLayout>
+            </FrameLayout>
+            <TabWidget android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@android:id/tabs"
+                android:layout_alignParentBottom="true">
+            </TabWidget>
+        </RelativeLayout>
+    </TabHost>
 </RelativeLayout>
